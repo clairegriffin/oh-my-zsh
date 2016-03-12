@@ -69,6 +69,7 @@ export GRADLE_HOME=/usr/local/Cellar/gradle/2.11/libexec
 export PROJECTS_DIR=/Users/claire/projects
 export LOCKSS_DIR=/Users/claire/projects/lockss
 export DAEMON_DIR=/Users/claire/projects/lockss/lockss-daemon
+export SNAFL_DIR=/Users/claire/projects/lockss/snafl
 export SWAGGER_CODEGEN=/Users/claire/projects/gitrepos/swagger-codegen/modules/swagger-codegen-cli/target
 
 alias genswagger='java -jar $SWAGGER_CODEGEN/swagger-codegen-cli.jar'
@@ -76,3 +77,4 @@ alias lockss='cd $LOCKSS_DIR'
 alias lockssd='cd $DAEMON_DIR'
 alias run1dc='cd $DAEMON_DIR/test/frameworks/run_one_daemon_clockss'
 alias run1d='cd $DAEMON_DIR/test/frameworks/run_one_daemon'
+alias snafl='cd $SNAFL_DIR'
