@@ -8,7 +8,7 @@ alias macvim="open -a MacVim"
 alias timer='echo "Timer started. Stop with Ctrl-D." && date && time cat && date'
 
 # Get OS X Software Updates, and update installed Ruby gems, Homebrew, npm, and their installed packages
-alias update='brew update; brew upgrade --all; brew cleanup; npm install npm -g; npm update -g; sudo gem update --system; sudo gem update'
+alias update='mas outdated; mas upgrade; brew update; brew upgrade --all; brew cleanup; npm install npm -g; npm update -g; sudo gem update --system; sudo gem update'
 
 # IP addresses
 alias ip="dig +short myip.opendns.com @resolver1.opendns.com"
