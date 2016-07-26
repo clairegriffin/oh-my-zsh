@@ -61,15 +61,15 @@ JAVA7_HOME=/Library/Java/JavaVirtualMachines/jdk1.7.0_76.jdk/Contents/Home
 JAVA8_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_74.jdk/Contents/Home
 export JAVA_HOME=$JAVA8_HOME
 
-export ANT_HOME=/usr/local/Cellar/ant/1.9.6/libexec
-export MAVEN_HOME=/usr/local/Cellar/maven/3.3.3/libexec
-export GRADLE_HOME=/usr/local/Cellar/gradle/2.11/libexec
+export ANT_HOME=/usr/local/Cellar/ant/1.9.7/libexec
+export MAVEN_HOME=/usr/local/Cellar/maven/3.3.9/libexec
+export GRADLE_HOME=/usr/local/Cellar/gradle/2.14/libexec
 
 # lockss support
 export PROJECTS_DIR=/Users/claire/projects
 export LOCKSS_DIR=/Users/claire/projects/lockss
 export DAEMON_DIR=/Users/claire/projects/lockss/lockss-daemon
-export SNAFL_DIR=/Users/claire/projects/lockss/snafl
+export LAAWS_DIR=/Users/claire/projects/lockss/laaws
 export SWAGGER_CODEGEN=/Users/claire/projects/gitrepos/swagger-codegen/modules/swagger-codegen-cli/target
 
 alias genswagger='java -jar $SWAGGER_CODEGEN/swagger-codegen-cli.jar'
@@ -77,4 +77,4 @@ alias lockss='cd $LOCKSS_DIR'
 alias lockssd='cd $DAEMON_DIR'
 alias run1dc='cd $DAEMON_DIR/test/frameworks/run_one_daemon_clockss'
 alias run1d='cd $DAEMON_DIR/test/frameworks/run_one_daemon'
-alias snafl='cd $SNAFL_DIR'
+alias laaws='cd $LAAWS_DIR'
