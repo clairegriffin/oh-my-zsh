@@ -8,7 +8,7 @@ alias macvim="open -a MacVim"
 alias timer='echo "Timer started. Stop with Ctrl-D." && date && time cat && date'
 
 # Get OS X Software Updates, and update installed Ruby gems, Homebrew, npm, and their installed packages
-alias update='brew update; brew upgrade --all; brew cleanup; npm install npm -g; npm update -g; sudo gem update --system; sudo gem update'
+alias update='mas outdated; mas upgrade; brew update; brew upgrade --all; brew cleanup; npm install npm -g; npm update -g; sudo gem update --system; sudo gem update'
 
 # IP addresses
 alias ip="dig +short myip.opendns.com @resolver1.opendns.com"
@@ -57,17 +57,24 @@ alias spotoff="sudo mdutil -a -i off"
 alias spoton="sudo mdutil -a -i on"
 
 # developer paths
-export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.7.0_72.jdk/Contents/Home
-export ANT_HOME=/usr/local/bin/ant
-export MAVEN_HOME=/usr/local/Cellar/maven/3.3.3/libexec
+JAVA7_HOME=/Library/Java/JavaVirtualMachines/jdk1.7.0_76.jdk/Contents/Home
+JAVA8_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_102.jdk/Contents/Home
+export JAVA_HOME=$JAVA8_HOME
+
+export ANT_HOME=/usr/local/Cellar/ant/1.9.7/libexec
+export MAVEN_HOME=/usr/local/Cellar/maven/3.3.9/libexec
+export GRADLE_HOME=/usr/local/Cellar/gradle/2.14/libexec
 
 # lockss support
 export PROJECTS_DIR=/Users/claire/projects
 export LOCKSS_DIR=/Users/claire/projects/lockss
 export DAEMON_DIR=/Users/claire/projects/lockss/lockss-daemon
-export CRAWLJAX_DIR=/Users/claire/projects/lockss/lockss-crawljax
+export LAAWS_DIR=/Users/claire/projects/lockss/laaws
+export SWAGGER_CODEGEN=/Users/claire/projects/gitrepos/swagger-codegen/modules/swagger-codegen-cli/target
 
+alias genswagger='java -jar $SWAGGER_CODEGEN/swagger-codegen-cli.jar'
 alias lockss='cd $LOCKSS_DIR'
 alias lockssd='cd $DAEMON_DIR'
 alias run1dc='cd $DAEMON_DIR/test/frameworks/run_one_daemon_clockss'
 alias run1d='cd $DAEMON_DIR/test/frameworks/run_one_daemon'
+alias laaws='cd $LAAWS_DIR'
